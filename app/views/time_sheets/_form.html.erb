@@ -18,7 +18,7 @@
   <% end %>
 
   <div class="actions">
-    <%= action = params[:type].nil? ? "Edit" : params[:type].humanize %>
+    <% action = params[:type].nil? ? "Edit" : params[:type].humanize %>
     <%= form.submit action %>
   </div>
 <% end %>
