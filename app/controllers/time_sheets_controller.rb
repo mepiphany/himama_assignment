@@ -3,7 +3,7 @@ class TimeSheetsController < ApplicationController
 
   # GET /time_sheets or /time_sheets.json
   def index
-    @time_sheets = TimeSheet.find_each
+    @time_sheets = current_user.time_sheets.find_each
   end
 
   # GET /time_sheets/1 or /time_sheets/1.json
