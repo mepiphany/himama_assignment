@@ -6,7 +6,9 @@ I've chosen simple one to many association to give a user multiple time sheet to
 
 If give another day: 
 
-* Probably split the way I do check in and check out
+* Change valition
+* Work on the form valition section
+* change the clock in and clock out to ajax or a different method
 * Write controller test
 
 If give another month:
