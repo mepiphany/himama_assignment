@@ -16,6 +16,12 @@ If give another month:
 * I would first establish what features are needed with the team
 * Separate between nice to haves and must haves
 
+Testing:
+
+RSpec
+User model and time sheet model
+
+
 Heroku link:
 
 https://himama-michael-assignment.herokuapp.com/
