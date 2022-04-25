@@ -1,3 +1,3 @@
 class TimeSheet < ApplicationRecord
-  belongs_to :user, dependent: :nullify
+  belongs_to :user
 end

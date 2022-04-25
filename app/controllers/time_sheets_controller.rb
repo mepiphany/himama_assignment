@@ -21,7 +21,7 @@ class TimeSheetsController < ApplicationController
 
   # POST /time_sheets or /time_sheets.json
   def create
-    @time_sheet = TimeSheet.new(time_sheet_params)
+    @time_sheet = current_user.time_sheets.build(time_sheet_params)
 
     respond_to do |format|
       if @time_sheet.save
