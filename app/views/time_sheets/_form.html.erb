@@ -11,22 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :clock_in %>
-    <%= form.datetime_select :clock_in %>
-  </div>
-
-  <div class="field">
-    <%= form.label :clock_out %>
-    <%= form.datetime_select :clock_out %>
-  </div>
-
-  <div class="field">
-    <%= form.label :reason %>
-    <%= form.text_field :reason %>
-  </div>
+  <% if params[:type].nil? %>
+    <%= render "edit_form", form: form  %>
+  <% else %>
+    <%= render "#{params[:type]}_form", form: form  %>
+  <% end %>
 
   <div class="actions">
-    <%= form.submit %>
+    <% action = params[:type].nil? ? "Edit" : params[:type].humanize %>
+    <%= form.submit action %>
   </div>
 <% end %>
