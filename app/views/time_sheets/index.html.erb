@@ -2,6 +2,9 @@
 
 <h1>Time Sheets</h1>
 
+<%= link_to 'Clock In', new_time_sheet_path(type: "clock_in"), class: "clock_in_btn" %>
+<%= link_to 'Clock Out', new_time_sheet_path(type: "clock_out"), class: "clock_out_btn" %>
+
 <table>
   <thead>
     <tr>
@@ -16,10 +19,10 @@
     <% @time_sheets.each do |time_sheet| %>
       <tr>
         <td><%= time_sheet.clock_in %></td>
-        <td><%= time_sheet.clock_out %></td>
+        <td><%= time_sheet.clock_out.blank? ? (link_to 'Clock Out', edit_time_sheet_path(time_sheet.id, type: "clock_out"), class: "clock_out_btn") : time_sheet.clock_out  %></td>
         <td><%= time_sheet.reason %></td>
         <td><%= link_to 'Show', time_sheet %></td>
-        <td><%= link_to 'Edit', edit_time_sheet_path(time_sheet) %></td>
+        <td><%= link_to 'Edit', edit_time_sheet_path(time_sheet, type: "edit") %></td>
         <td><%= link_to 'Destroy', time_sheet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -28,4 +31,3 @@
 
 <br>
 
-<%= link_to 'New Time Sheet', new_time_sheet_path %>
