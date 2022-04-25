@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I've quickly come up with the user worflow and ERD diagram
 
-Things you may want to cover:
+I've chosen simple one to many association to give a user multiple time sheet to create, edit and delete
 
-* Ruby version
+If give another day: 
 
-* System dependencies
+* Probably split the way I do check in and check out
+* Write controller test
 
-* Configuration
+If give another month:
 
-* Database creation
+* I would first establish what features are needed with the team
+* Separate between nice to haves and must haves
 
-* Database initialization
+Heroku link:
 
-* How to run the test suite
+https://himama-michael-assignment.herokuapp.com/
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
