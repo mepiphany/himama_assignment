@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clock in:</strong>
+  <%= @time_sheet.clock_in %>
+</p>
+
+<p>
+  <strong>Clock out:</strong>
+  <%= @time_sheet.clock_out %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @time_sheet.reason %>
+</p>
+
+<%= link_to 'Edit', edit_time_sheet_path(@time_sheet) %> |
+<%= link_to 'Back', time_sheets_path %>
