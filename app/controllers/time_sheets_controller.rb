@@ -3,12 +3,11 @@ class TimeSheetsController < ApplicationController
 
   # GET /time_sheets or /time_sheets.json
   def index
-    @time_sheets = TimeSheet.all
+    @time_sheets = TimeSheet.find_each
   end
 
   # GET /time_sheets/1 or /time_sheets/1.json
-  def show
-  end
+  def show;end
 
   # GET /time_sheets/new
   def new
